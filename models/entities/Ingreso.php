@@ -4,31 +4,54 @@ namespace app\models\entities;
 use app\models\drivers\ConexDB;
 
 
-class Ingreso {
-    private $db;
+class Ingreso extends entity{
 
-    public function obtenerIngreso($mes, $anio) {
-        $sql = "SELECT * FROM reports WHERE month = $mes AND year = $anio";
-        $resultDb = $this->db->query($sql);
-        $resultDb->bind_param("si", $mes, $anio);
-        $resultDb->execute();
-        return $resultDb->get_result()->fetch_assoc();
+    protected $id = null;
+    protected $month = "";
+    protected $year = "";
+
+
+    public function obtenerIngreso() {
+        $sql = "SELECT * FROM `reports`";
+        $conex = new ConexDB();
+        $resultDb = $conex->execSQL($sql);
+        $ingresos = [];
+        if ($resultDb->num_rows > 0) {
+            while ($rowDb = $resultDb->fetch_assoc()) {
+                $ingreso = new Ingreso();
+                $ingreso->set('id', $rowDb['id']);
+                $ingreso->set('month', $rowDb['nombre']);
+                $ingreso->set('email', $rowDb['email']);
+                array_push($ingresos, $ingreso);
+            }
+        }
+        $conex->close();
+        return $ingresos;
+        
     }
 
-    public function guardarIngreso($mes, $anio, $valor) {
-        $sql = $this->db->prepare("INSERT INTO reports (month, year) VALUES");
-        $sql .= "('" . $this->$mes . "','" . $this->$anio . "')";        
+    public function guardarIngreso() {
+            $sql = "insert into reports (id,month,year) values ";
+            $sql .= "('" . $this->id . "','" . $this->month . "'," . $this->year . ")";
+            $conex = new ConexDB();
+            $resultDb = $conex->execSQL($sql);
+            $conex->close();
+            return $resultDb;
+    }
+
+    public function actualizarIngreso() {
+        $sql = "update personas set ";
+        $sql .= "month='" . $this->month . "',";
+        $sql .= "year='" . $this->year . "',";
+        $sql .= " where id=" . $this->id;
         $conex = new ConexDB();
         $resultDb = $conex->execSQL($sql);
         $conex->close();
         return $resultDb;
     }
 
-    public function actualizarIngreso($mes, $anio, $valor) {
-        $query = "UPDATE ingresos SET valor = ? WHERE mes = ? AND anio = ?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param("dsi", $valor, $mes, $anio);
-        return $stmt->execute();
+    public function delete(){
+
     }
 }
 ?>

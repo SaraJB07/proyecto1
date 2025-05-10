@@ -4,9 +4,9 @@ namespace app\models\entities;
 
 abstract class Entity
 {
-    abstract function all();
-    abstract function save();
-    abstract function update();
+    abstract function obtenerIngreso();
+    abstract function guardarIngreso();
+    abstract function actualizarIngreso();
     abstract function delete();
 
     public function set($prop, $value)
