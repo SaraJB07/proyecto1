@@ -6,6 +6,11 @@
 </head>
 <body>
     <h1>Registrar o Modificar Ingreso Mensual</h1>
+    <?php
+    if(!empty($_POST['mes'])){
+        echo $_POST['mes'];
+    }
+    ?>
     <form action="" method="post">
         <label for="mes">Mes:</label>
         <input type="text" name="mes" id="mes" required><br><br>

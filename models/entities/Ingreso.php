@@ -12,7 +12,7 @@ class Ingreso extends entity{
 
 
     public function obtenerIngreso() {
-        $sql = "SELECT * FROM `reports`";
+        $sql = "SELECT income.*, reports.month, reports.year from income INNER JOIN reports on income.idReport= reports.id";
         $conex = new ConexDB();
         $resultDb = $conex->execSQL($sql);
         $ingresos = [];
