@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+
+.logo {
+    color: #0040bc;        
+    font-size: 2.5em;       
+    text-align: center;     
+    font-family: "DM Serif Text", serif; 
+    font-weight: bold;      
+    margin-top: 30px;       
+}
+
+.menu-container {
+    display: flex;         
+    justify-content: center; 
+    margin-top: 20px;      
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15); 
+    background: #fff;
+    border-radius: 12px;
+    padding: 70px 40px;
+}
+
+.opciones{
+    background-color: #7360f9; 
+    color: white;           
+    padding: 30px 40px;    
+    border-radius: 10px;     
+    text-decoration: none;   
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    font-family: "DM Serif Text", serif; 
+    font-size: 2em;       
+    margin: 0 10px;        
+    cursor: pointer; 
+}
+.opciones1 {
+    background-color: #bc9bf3; 
+    color: white;           
+    padding: 30px 40px;    
+    border-radius: 10px;     
+    text-decoration: none;   
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    font-family: "DM Serif Text", serif; 
+    font-size: 2em;       
+    margin: 0 10px;        
+    cursor: pointer; 
+}
+
+.opciones2 {
+    background-color: #f6e6a5; 
+    color: white;           
+    padding: 30px 40px;    
+    border-radius: 10px;     
+    text-decoration: none;   
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    font-family: "DM Serif Text", serif; 
+    font-size: 2em;       
+    margin: 0 10px;        
+    cursor: pointer; 
+}
+
+.opciones3 {
+    background-color: #c8d69d; 
+    color: white;           
+    padding: 30px 40px;    
+    border-radius: 10px;     
+    text-decoration: none;   
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    font-family: "DM Serif Text", serif; 
+    font-size: 2em;       
+    margin: 0 10px;        
+    cursor: pointer; 
+}

@@ -1,5 +1,5 @@
 <?php
-// Redirige al formulario principal
-header("Location: views/form_ingreso.php");
-exit;
-?>
+
+header("location: views/Principal.php");
+//require_once 'models/entities/Entity.php';
+//require_once 'models/entities/Categorie.php';
