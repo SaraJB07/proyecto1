@@ -1,30 +1,63 @@
 <?php
 
 namespace app\controllers;
+
 use app\models\entities\Ingreso;
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $mes = $_POST['mes'];
-    $anio = intval($_POST['anio']);
-    $valor = floatval($_POST['valor']);
-
-    if ($valor < 0) {
-        $mensaje = " El ingreso no puede ser menor a cero.";
-        require 'views/mensaje.php';
-        exit;
+class IngresoController {
+    
+    public function queryAllIngreso()
+    {
+        $ingreso = new Ingreso();
+        $data = $ingreso->all();
+        return $data;
     }
 
-    $ingreso = new Ingreso();
-    $ingresoExistente = $ingreso->obtenerIngreso($mes, $anio);
+    
+    public function saveNewIngreso($request)
+    {
+        $ingreso = new Ingreso();
+        $ingreso->set('value', $request['valueInput']);
+        $ingreso->set('month', $request['monthInput']);
+        $ingreso->set('year', $request['yearInput']);
+        $conex = new \app\models\drivers\ConexDB();
+        $result = $conex->execSQL("SELECT id FROM reports ORDER BY id DESC LIMIT 1");
+        $idReport = null;
+        if ($row = $result->fetch_assoc()) {
+        $idReport = $row['id'];
+    }
+    $conex->close();
 
-    if ($ingresoExistente) {
-        $ingreso->actualizarIngreso($mes, $anio, $valor);
-        $mensaje = "Ingreso actualizado correctamente.";
-    } else {
-        $ingreso->guardarIngreso($mes, $anio, $valor);
-        $mensaje = "Ingreso registrado correctamente.";
+    $ingreso->set('idReport', $idReport);
+        return $ingreso->save();
     }
 
-    require 'views/mensaje.php';
+    
+    public function updateIngreso($request)
+    {
+        echo "ID: " . $request['idInput'];
+        echo "Value: " . $request['valueInput'];
+        $ingreso = new Ingreso();
+        $ingreso->set('id', $request['idInput']);
+        $ingreso->set('value', $request['valueInput']);
+        if (!empty($request['idReport'])) {
+            $ingreso->set('idReport', $request['idReport']);
+        } else {
+            $found = $ingreso->find($request['idInput']);
+            $ingreso->set('idReport', $found->get('idReport'));
+        }
+        return $ingreso->update();
+    }
+
+    
+    public function deleteIngreso($id)
+    {
+        $ingreso = new Ingreso();
+        $ingreso->set('id', $id);
+        if (!$ingreso->isDeletable()) { 
+            return false;
+        }
+        return $ingreso->delete();
+    }
 }
 ?>
