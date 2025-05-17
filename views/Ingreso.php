@@ -24,22 +24,30 @@ $ingresos = $controller->queryAllIngreso();
 <head>
     <meta charset="UTF-8">
     <title>Ingresos</title>
+    <link rel="stylesheet" href="css/Ingreso.css">
 </head>
 <body>
     <div class="logo">
         <h1>Ingreso</h1>
     </div>
 
-    <a href="formularioIngreso.php">Registrar Ingreso</a> <a href="../views/Principal.php">Volver</a>
-    <table>
+    <div class="opciones">
+    <a href="formularioIngreso.php">Registrar Ingreso</a> 
+    </div>
+    <br>
+
+    
+
+    <table class="Tabla">
         <thead>
             <tr>
-                
                 <th>Mes</th>
                 <th>Año</th>
                 <th>Ingreso</th>
+                <th>Opciones</th>
             </tr>
         </thead>
+        <div class="tabla1">
         <tbody>
             <?php
             foreach ($ingresos as $ingreso) {
@@ -53,7 +61,14 @@ $ingresos = $controller->queryAllIngreso();
             }
             ?>
         </tbody>
+        </div>
+
+       
     </table>
+
+    <div class="opciones">
+    <a href="../views/Principal.php">Volver</a>
+    </div>
     
 </body>
 </html>

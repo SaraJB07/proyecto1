@@ -26,7 +26,7 @@
     padding: 30px 40px;    
     border-radius: 10px;     
     text-decoration: none;   
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
     font-family: "DM Serif Text", serif; 
     font-size: 2em;       
     margin: 0 10px;        
@@ -38,7 +38,7 @@
     padding: 30px 40px;    
     border-radius: 10px;     
     text-decoration: none;   
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
     font-family: "DM Serif Text", serif; 
     font-size: 2em;       
     margin: 0 10px;        
@@ -46,12 +46,12 @@
 }
 
 .opciones2 {
-    background-color: #f6e6a5; 
+    background-color: #7360f9; 
     color: white;           
     padding: 30px 40px;    
     border-radius: 10px;     
     text-decoration: none;   
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
     font-family: "DM Serif Text", serif; 
     font-size: 2em;       
     margin: 0 10px;        
@@ -59,14 +59,15 @@
 }
 
 .opciones3 {
-    background-color: #c8d69d; 
+    background-color: #bc9bf3; 
     color: white;           
     padding: 30px 40px;    
     border-radius: 10px;     
     text-decoration: none;   
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.271); 
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
     font-family: "DM Serif Text", serif; 
     font-size: 2em;       
     margin: 0 10px;        
     cursor: pointer; 
 }
+

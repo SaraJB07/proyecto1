@@ -52,11 +52,13 @@ class IngresoController {
     
     public function deleteIngreso($id)
     {
+        
         $ingreso = new Ingreso();
         $ingreso->set('id', $id);
         if (!$ingreso->isDeletable()) { 
             return false;
         }
+
         return $ingreso->delete();
     }
 }

@@ -45,22 +45,6 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
             <input type="text" name="monthInput" required value="<?= $ingreso ? $ingreso->get('month') : '' ?>" <?php if (!empty($_GET['id'])) echo 'readonly'; ?>>      
         </div>
 
-        <!--<div>
-            <label>Categoría</label>
-            <select name="categoriaInput" required>
-                <option value="">Seleccione una categoría</option>
-                <?php
-                /*
-                if ($categorias->num_rows > 0) {
-                    while ($cat = $categorias->fetch_assoc()) {
-                        $selected = ($dish && $cat['id'] == $dish->get('idCategory')) ? 'selected' : '';
-                        echo "<option value='{$cat['id']}' $selected>{$cat['name']}</option>";
-                    }
-                }*/
-                ?>
-            </select>
-        </div>-->
-
         <div>
             <label>Año: </label>
             <input type="number" name="yearInput" value="<?= $ingreso ? $ingreso->get('year') : '' ?>" min="1" step="1" required <?php if (!empty($_GET['id'])) echo 'readonly'; ?>>

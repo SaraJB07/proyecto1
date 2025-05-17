@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/Principal.css">
-    <link rel="icon" type="image/png" href="css/Imagenes/logo.jpg">
+    <link rel="icon" type="image/png" href="css/Imagenes/4931660.jpg">
     <title>Control de Gastos</title>
     
 </head>

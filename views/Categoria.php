@@ -39,7 +39,7 @@ $categories = $controller->queryAllCategories();
         </thead>
         
         <tbody>
-        <a href="../views/Principal.php">Volver</a></body>
+   
     
         <?php
         foreach ($categories as $categorie) {

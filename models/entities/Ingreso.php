@@ -12,6 +12,7 @@ class Ingreso extends Entity
     protected $idReport = null;  
     protected $month = null; 
     protected $year = null; 
+  
       
     
     public function all()
@@ -117,28 +118,31 @@ class Ingreso extends Entity
 
     public function delete()
     {
+
+        $dato = $this->find($this->id);
+        $idReport= $dato->idReport;
         $conex = new ConexDB();
         $sql = "DELETE FROM income WHERE id = " . intval($this->id);
         $resultDb = $conex->execSQL($sql);
         $deleteReport = false;
         $reportBlocked = false;
         // Solo intentar borrar el reporte si idReport es válido y el ingreso fue eliminado
-        if ($resultDb && !is_null($this->idReport) && $this->idReport !== '') {
+        if ($resultDb && !is_null($idReport) && $idReport !== '') {
             // Verificar que no existan referencias en income ni en bills
-            $sql = "SELECT COUNT(*) as count FROM income WHERE idReport = " . intval($this->idReport);
+            $sql = "SELECT COUNT(*) as count FROM income WHERE idReport = " . intval($idReport);
             $result = $conex->execSQL($sql);
             $countIncome = 0;
             if ($result && $row = $result->fetch_assoc()) {
                 $countIncome = (int)$row['count'];
             }
-            $sql = "SELECT COUNT(*) as count FROM bills WHERE idReport = " . intval($this->idReport);
+            $sql = "SELECT COUNT(*) as count FROM bills WHERE idReport = " . intval($idReport);
             $result = $conex->execSQL($sql);
             $countBills = 0;
             if ($result && $row = $result->fetch_assoc()) {
                 $countBills = (int)$row['count'];
             }
             if ($countIncome === 0 && $countBills === 0) {
-                $sqlDeleteReport = "DELETE FROM reports WHERE id = " . intval($this->idReport);
+                $sqlDeleteReport = "DELETE FROM reports WHERE id = " . intval($idReport);
                 $deleteReport = $conex->execSQL($sqlDeleteReport);
             } elseif ($countBills > 0) {
                 $reportBlocked = true;
