@@ -1,13 +1,13 @@
 <?php
-
 namespace app\models\entities;
 
+echo "Loaded entity<br>";
 abstract class Entity
 {
-    abstract function obtenerIngreso();
-    abstract function guardarIngreso();
-    abstract function actualizarIngreso();
-    abstract function delete();
+    abstract public function all();
+    abstract  public function save();
+    abstract  public function update();
+    abstract  public function delete();
 
     public function set($prop, $value)
     {

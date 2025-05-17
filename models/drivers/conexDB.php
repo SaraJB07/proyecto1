@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models\drivers;
+$conexDB = new ConexDB();
 
 use mysqli;
 
@@ -8,22 +9,21 @@ class ConexDB {
     private $host = 'localhost';
     private $user = 'root';
     private $pwd = '';
-    private $nameDB = 'proyecto1';
+    private $nameDB = 'proyecto_1_db';
+    private $port = 3307;
 
     private $conex = null;
 
     public function __construct()
     {
-            $this->conex = new mysqli(
-                $this->host,
-                $this->user,
-                $this->pwd,
-                $this->nameDB
-            );
+        $this->conex = new mysqli(
+            $this->host,
+            $this->user,
+            $this->pwd,
+            $this->nameDB,
+            $this->port
+        );
         
-        if ($this->conex->connect_error) {
-            die('Error al conectarse con la base de datos ' . $this->conex->connect_error);
-        } 
     }
 
     public function execSQL($sql){
