@@ -1,42 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+/* css/Ingreso.css */
 
+/* Importa los estilos generales */
+@import url("General.css");
 
-.logo {
-    color: #0040bc;        
-    font-size: 2.5em;       
-    text-align: center;     
-    font-family: "DM Serif Text", serif; 
-    font-weight: bold;      
-    margin-top: 30px;       
+/* Estilos específicos para la página de ingresos */
+
+/* Estilo para el div que contiene el enlace "Registrar Ingreso" y "Volver" */
+.opciones {
+    margin-bottom: 20px;
+    text-align: center; /* Centra el div de opciones */
+    width: 100%;
+    max-width: 800px; /* Limita el ancho */
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+    padding: 12px 48px;
+    text-align: left;
+    border-bottom: 1px solid #EDF1F2; /* Borde ligero entre filas */
+}
+/* Estilo para los enlaces dentro del div .opciones para que parezcan botones */
+.opciones a {
+    /* Hereda estilos de .button-link en General.css */
+    /* Añade ajustes específicos aquí si es necesario */
+    margin: 0 10px; /* Espacio entre los enlaces si hay varios */
 }
 
-.opciones{
-    display: flex;         
-    justify-content: center; 
-    background-color: #7d6effa9; 
-    color: white;           
-    padding: 30px 40px;    
-    border-radius: 10px;     
-    text-decoration: none;   
-    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
-    font-family: "DM Serif Text", serif; 
-    font-size: 2em;       
-    margin: 0 10px ;        
-    cursor: pointer; 
-}
-
-.Tabla{
-    display: flex;         
-    justify-content: center; 
-    font-family: "DM Serif Text", serif;
-    
-}
-
-.Tabla th, .Tabla td{
-border: 2px solid #d4bfe6;
-padding: 10px;
-text-align: center;
+/* Estilo para la tabla */
+.Tabla {
+    /* Hereda estilos generales de tabla de General.css */
+    margin-bottom: 20px; /* Añade espacio debajo de la tabla */
 }
 
 
+/* Nota: El div con la clase "tabla1" que envuelve a tbody es HTML inválido.
+   Los estilos se aplican directamente a table, thead, tbody, tr, th, td.
+   Elimina <div class="tabla1"> y </div> de tu HTML (líneas 17 y 31). */
 
+/* Sugerencia: Eliminar la etiqueta <br> en ingreso.php (línea 4) */
+/* Si no puedes eliminarla: .opciones + br { display: none; } */

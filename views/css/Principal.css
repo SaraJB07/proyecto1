@@ -1,73 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+/* css/Principal.css */
 
+/* Importa los estilos generales */
+@import url("General.css");
 
-.logo {
-    color: #0040bc;        
-    font-size: 2.5em;       
-    text-align: center;     
-    font-family: "DM Serif Text", serif; 
-    font-weight: bold;      
-    margin-top: 30px;       
-}
+/* Estilos específicos para la página del menú principal */
 
 .menu-container {
-    display: flex;         
-    justify-content: center; 
-    margin-top: 20px;      
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15); 
-    background: #fff;
-    border-radius: 12px;
-    padding: 70px 40px;
+    display: flex; /* Usa flexbox para el diseño */
+    flex-direction: column; /* Apila elementos verticalmente */
+    align-items: center; /* Centra elementos horizontalmente */
+    padding: 20px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px; /* Limita el ancho del contenedor del menú */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    width: 100%; /* Asegura que ocupe el ancho disponible hasta el max-width */
 }
 
-.opciones{
-    background-color: #7360f9; 
-    color: white;           
-    padding: 30px 40px;    
-    border-radius: 10px;     
-    text-decoration: none;   
-    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
-    font-family: "DM Serif Text", serif; 
-    font-size: 2em;       
-    margin: 0 10px;        
-    cursor: pointer; 
-}
-.opciones1 {
-    background-color: #bc9bf3; 
-    color: white;           
-    padding: 30px 40px;    
-    border-radius: 10px;     
-    text-decoration: none;   
-    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
-    font-family: "DM Serif Text", serif; 
-    font-size: 2em;       
-    margin: 0 10px;        
-    cursor: pointer; 
+/* Estilo para los elementos form para añadir margen inferior */
+.menu-container form {
+    margin-bottom: 15px; /* Añade espacio entre botones */
+    background-color: transparent; /* Sin fondo para formularios en el menú */
+    padding: 0; /* Sin padding para formularios en el menú */
+    box-shadow: none; /* Sin sombra para formularios en el menú */
+    display: block; /* Asegura que el form se comporte como bloque */
 }
 
-.opciones2 {
-    background-color: #7360f9; 
-    color: white;           
-    padding: 30px 40px;    
-    border-radius: 10px;     
-    text-decoration: none;   
-    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
-    font-family: "DM Serif Text", serif; 
-    font-size: 2em;       
-    margin: 0 10px;        
-    cursor: pointer; 
+/* Estilo para todos los botones dentro del contenedor del menú */
+.menu-container button {
+    display: block; /* Hace que los botones ocupen todo el ancho */
+    width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+    margin: 0 auto;
+    padding: 12px 20px; /* Un poco más de padding */
+    font-size: 1.1em; /* Fuente ligeramente más grande */
+    text-align: center; /* Centra el texto del botón */
+
 }
 
-.opciones3 {
-    background-color: #bc9bf3; 
-    color: white;           
-    padding: 30px 40px;    
-    border-radius: 10px;     
-    text-decoration: none;   
-    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.271); 
-    font-family: "DM Serif Text", serif; 
-    font-size: 2em;       
-    margin: 0 10px;        
-    cursor: pointer; 
-}
-
+/* Sugerencia: Eliminar las etiquetas <br> de principal.php (líneas 5, 11, 15, 19) */
+/* Si no puedes eliminarlas, puedes intentar ocultarlas con CSS, pero eliminarlas es mejor */
+/* .menu-container br { display: none; } */

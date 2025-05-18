@@ -1,0 +1,58 @@
+/* css/ControlGastos.css */
+
+/* Importa los estilos generales */
+@import url("General.css");
+
+/* Estilos específicos para la página de control de gastos */
+
+/* Estilo para el contenedor de los enlaces en la parte superior */
+.top-links {
+    margin-bottom: 20px;
+    text-align: center; /* Centra el contenido (el enlace) horizontalmente */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho del recuadro */
+    margin-left: auto; /* Centra el recuadro */
+    margin-right: auto; /* Centra el recuadro */
+    padding: 15px; /* Añade espacio dentro del recuadro */
+    background-color: #FFFFFF; /* Fondo blanco para el recuadro */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    display: flex; /* Usa flexbox para centrar el contenido si hay varios elementos */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    align-items: center; /* Centra los elementos hijos verticalmente */
+}
+
+/* Estilo para el enlace "Registrar Gasto" dentro del recuadro */
+.top-links a.button-link {
+     /* Hereda estilos de .button-link en General.css */
+     /* Puedes añadir ajustes específicos aquí si es necesario */
+     margin: 0; /* Elimina el margen si solo hay un enlace */
+     display: inline-block; /* Asegura que se comporte correctamente dentro del flex container */
+}
+
+
+/* Nota: El formulario que solo contiene un input oculto
+   debería ser eliminado si no se usa. */
+
+/* Estilo para la tabla */
+table {
+    /* Hereda estilos generales de tabla de General.css */
+    /* Elimina los atributos inline border/cellpadding/cellspacing del tag table en tu HTML */
+}
+
+/* Anula o añade estilos para enlaces de tabla si es necesario */
+table td a {
+    /* Hereda estilos de td a en General.css */
+}
+
+/* Estilo para el enlace "Volver" (que está debajo de la tabla) */
+/* Aplicamos la clase .back-link definida en General.css */
+body > a.back-link {
+    display: block; /* Hace que sea un elemento de bloque */
+    text-align: center; /* Centra el enlace */
+    margin-top: 20px; /* Espacio encima del enlace */
+    width: 100%;
+    max-width: 500px; /* Limita el ancho */
+    margin-left: auto;
+    margin-right: auto;
+}

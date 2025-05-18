@@ -1,0 +1,50 @@
+/* css/Categoria.css */
+
+/* Importa los estilos generales */
+@import url("General.css");
+
+/* Estilos específicos para la página de categorías */
+
+/* Estilo para el enlace "Registrar Categoria" */
+/* Aplicamos la clase .button-link definida en General.css para que parezca un botón */
+/* Sugerencia: Añade class="button-link" a tu etiqueta <a> en Categoria.php */
+body > a.button-link {
+    display: block; /* Asegura que ocupe su propia línea */
+    margin: 20px auto; /* Centra el enlace horizontalmente y añade margen */
+    text-align: center; /* Centra el texto dentro del "botón" */
+    max-width: 200px; /* Limita el ancho máximo del botón */
+}
+
+/* Estilo para la tabla de categorías */
+table {
+    /* Hereda estilos generales de tabla de General.css */
+    /* No necesitas añadir estilos de borde, padding, etc. aquí si usas General.css */
+    margin-bottom: 20px; /* Añade espacio debajo de la tabla */
+}
+
+/* Estilo para el enlace "Volver a página de inicio" */
+/* Aplicamos la clase .back-link definida en General.css */
+/* Sugerencia: Añade class="back-link" a tu etiqueta <a> en Categoria.php */
+body > a.back-link {
+    display: block; /* Hace que sea un elemento de bloque */
+    text-align: center; /* Centra el enlace */
+    margin-top: 20px; /* Espacio encima del enlace */
+    width: 100%;
+    max-width: 500px; /* Limita el ancho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Estilos para los enlaces de Modificar y Eliminar en la tabla */
+/* Estos heredan de td a en General.css, pero puedes añadir estilos específicos si quieres */
+/* Por ejemplo, para darles los colores de delete-link y modify-link si no los aplicaste en el HTML */
+/*
+td a:first-of-type { // El primer enlace en la celda (Modificar)
+    color: #347C98; // Color azul medio
+}
+
+td a:last-of-type { // El último enlace en la celda (Eliminar)
+    color: #d9534f; // Color rojo apagado
+}
+*/

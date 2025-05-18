@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -21,39 +20,47 @@ $categories = $controller->queryAllCategories();
 <head>
     <meta charset="UTF-8">
     <title>Categorias</title>
+    <link rel="stylesheet" href="css/General.css">
+    <link rel="stylesheet" href="css/Categoria.css">
 </head>
 
 <body>
     <div class="logo">
-    <h1>Categorias</h1>
+        <h1>Categorias</h1>
     </div>
 
-    <a href="formularioCategoria.php">Registrar Categoria</a>
+    <a href="formularioCategoria.php" class="button-link">Registrar Categoria</a>
+
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Porcentaje</th>
-                
+                <th colspan="2">Opciones</th>
             </tr>
         </thead>
-        
+
         <tbody>
-   
-    
-        <?php
-        foreach ($categories as $categorie) {
-            echo '<tr>';
-            echo '  <td>' . $categorie->get('name') . '</td>';
-            echo '  <td>' . $categorie->get('percentage') . '</td>';
-            echo '  <td>';
-            echo '      <a href="formularioCategoria.php?id=' . $categorie->get('id') . '">Modificar</a> ';
-            echo '      <a href="../views/acciones/Categoria_Acciones/EliminarCategoria.php?id=' . $categorie->get('id') . '">Eliminar</a>';
-            echo '  </td>';
-        }
-        ?>
+            <?php
+            foreach ($categories as $categorie) {
+                echo '<tr>';
+                echo '  <td>' . htmlspecialchars($categorie->get('name')) . '</td>';
+                echo '  <td>' . htmlspecialchars($categorie->get('percentage')) . '</td>';
+                // Combinamos los enlaces Modificar y Eliminar en una sola celda
+                echo '  <td>';
+                // Añadimos clases para estilizar los enlaces si es necesario
+                echo '    <a href="formularioCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" class="modify-link">Modificar</a> ';
+                // Añadimos confirmación para eliminar y la clase delete-link
+                echo '    <a href="../views/acciones/Categoria_Acciones/EliminarCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" onclick="return confirm(\'¿Seguro que desea eliminar esta categoría?\')" class="delete-link">Eliminar</a>';
+                echo '  </td>';
+                echo '</tr>';
+            }
+            ?>
         </tbody>
     </table>
-    <a href="../views/Principal.php">Volver a página de inicio</a></body>
+
+    <a href="../views/Principal.php" class="back-link">Volver a página de inicio</a>
+
+</body>
 
 </html>

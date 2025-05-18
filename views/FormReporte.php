@@ -26,6 +26,8 @@ $conex->close();
 <head>
     <meta charset="UTF-8">
     <title>Obtener Reporte</title>
+    <link rel="stylesheet" href="css/General.css">
+    <link rel="stylesheet" href="css/FormReporte.css">
 </head>
 
 <body>

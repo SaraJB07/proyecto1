@@ -1,0 +1,52 @@
+/* css/FormReporte.css */
+
+/* Importa los estilos generales */
+@import url("General.css");
+
+/* Estilos específicos para la página del formulario de reporte */
+
+/* Estilo para el contenedor del formulario */
+form {
+    /* Hereda estilos generales de formulario de General.css */
+    max-width: 500px; /* Limita el ancho del formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente y añade margen */
+    /* General.css ya aplica display: flex, flex-direction: column, align-items: center */
+}
+
+/* Estilo para los divs dentro del formulario */
+form div {
+    /* Hereda margin-bottom de General.css */
+    /* Hereda width: 100% de General.css */
+}
+
+/* Estilo para etiquetas */
+form label {
+    /* Hereda estilos de General.css */
+    /* Hereda display: block, margin-bottom, font-weight, color */
+}
+
+/* Estilo para inputs select */
+form select {
+    /* Hereda estilos de General.css */
+    /* Hereda width: 100%, padding, border, border-radius, font-size */
+}
+
+/* Estilo para el botón de enviar */
+form button[type="submit"] {
+    /* Hereda estilos de General.css */
+    /* Hereda margin-top, width: auto, align-self: flex-start */
+    /* Añade ajustes específicos aquí si es necesario */
+}
+
+/* Estilo para el enlace "Volver" */
+/* Aplicamos la clase .back-link definida en General.css */
+/* Sugerencia: Añade class="back-link" a tu etiqueta <a> en FormReporte.php */
+body > a.back-link {
+    display: block; /* Hace que sea un elemento de bloque */
+    text-align: center; /* Centra el enlace */
+    margin-top: 20px; /* Espacio encima del enlace */
+    width: 100%;
+    max-width: 500px; /* Limita el ancho */
+    margin-left: auto;
+    margin-right: auto;
+}

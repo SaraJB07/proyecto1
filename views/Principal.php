@@ -3,41 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/Principal.css">
+    <link rel="stylesheet" href="css/principal.css">
     <link rel="icon" type="image/png" href="css/Imagenes/4931660.jpg">
     <title>Control de Gastos</title>
-    
 </head>
 
 <body class="StartWeb">
     <div class="logo">
-    <h1>Control de gastos</h1>
+        <h1>Control de Gastos</h1>
     </div>
-    
 
-    <div class ="menu-container">
+    <div class="menu-container">
         <form action="Ingreso.php" method="get">
             <button class="opciones" type="submit">Ingresos</button>
         </form>
-        <br>
-       
         
         <form action="Categoria.php" method="get">
-            <button class="opciones1" type="submit">Categorias</button>
+            <button class="opciones" type="submit">Categorías</button>
         </form>
-        <br>
+        
         <form action="ControlGastos.php" method="get">
-            <button class="opciones2" type="submit">Gastos Mensuales</button>
+            <button class="opciones" type="submit">Gastos Mensuales</button>
         </form>
-        <br>        
+        
         <form action="FormReporte.php" method="get">
-            <button class="opciones3" type="submit">Generar reporte</button>
+            <button class="opciones" type="submit">Generar Reporte</button>
         </form>
-        <br>
-
     </div>
 
 </body>
-
 
 </html>

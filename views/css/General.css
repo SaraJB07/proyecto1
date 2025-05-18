@@ -1,0 +1,186 @@
+/* css/General.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente profesional y disponible */
+    background-color: #F4F7F6; /* Fondo gris claro */
+    color: #333333; /* Texto gris oscuro */
+    line-height: 1.6;
+    padding: 20px; /* Espaciado alrededor del contenido */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el alto de la ventana */
+    display: flex;
+    flex-direction: column; /* Permite que el contenido se apile y el footer (si lo hubiera) vaya al final */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #AAB7B8; /* Separador sutil */
+    width: 100%; /* Asegura que el logo ocupe todo el ancho disponible */
+    max-width: 800px; /* Limita el ancho máximo del logo */
+}
+
+.logo h1 {
+    color: #1A4E6A; /* Azul primario para encabezados */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    color: #1A4E6A; /* Azul primario para encabezados de sección */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #EDF1F2;
+    padding-bottom: 5px;
+    width: 100%; /* Asegura que el h2 ocupe todo el ancho disponible */
+    max-width: 800px; /* Limita el ancho máximo del h2 */
+    text-align: center; /* Centra el texto del h2 */
+}
+
+a {
+    color: #347C98; /* Azul secundario para enlaces */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+}
+
+a:hover {
+    color: #2A6A85; /* Azul de acento al pasar el ratón */
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+
+button {
+    display: inline-block; /* Permite padding y margin */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    background-color: #347C98; /* Fondo azul secundario */
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+button:hover {
+    background-color: #2A6A85; /* Azul de acento al pasar el ratón */
+    
+}
+
+/* Estilo para enlaces que deben parecer botones */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #347C98;
+    color: white !important; /* Usa !important para anular el color por defecto del enlace */
+    text-decoration: none !important; /* Usa !important para anular el subrayado por defecto del enlace */
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Espacio entre button-links */
+}
+
+.button-link:hover {
+    background-color: #2A6A85;
+    text-decoration: none !important;
+}
+
+/* Estilos de Tabla */
+table {
+    width: 100%; /* La tabla ocupa todo el ancho */
+    max-width: 800px; /* Limita el ancho máximo de la tabla */
+    border-collapse: collapse; /* Elimina el espacio entre bordes */
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    background-color: #FFFFFF; /* Fondo blanco para la tabla */
+    margin-left: auto; /* Centra la tabla si tiene un max-width */
+    margin-right: auto; /* Centra la tabla si tiene un max-width */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #EDF1F2; /* Borde ligero entre filas */
+}
+
+th {
+    background-color: #AAB7B8; /* Fondo del encabezado */
+    color: #333333; /* Color del texto del encabezado */
+    font-weight: bold;
+    text-transform: uppercase; /* Encabezados en mayúsculas */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #EDF1F2; /* Gris azulado claro para filas pares */
+}
+
+tbody tr:hover {
+    background-color: #DDE4E6; /* Resaltado ligeramente más oscuro al pasar el ratón */
+}
+
+td a {
+    margin-right: 10px; /* Espacio entre enlaces en celdas de tabla */
+    white-space: nowrap; /* Evita que los enlaces se envuelvan */
+}
+
+/* Colores específicos para enlaces de tabla (opcional, anula el estilo general 'a') */
+td a.delete-link {
+    color: #d9534f; /* Rojo apagado para eliminar */
+}
+
+td a.modify-link {
+     color: #347C98; /* Azul medio para modificar */
+}
+
+/* Estilos de Formulario */
+form {
+    background-color: #FFFFFF; /* Fondo blanco para formularios */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    width: 100%; /* El formulario ocupa todo el ancho */
+    max-width: 500px; /* Limita el ancho máximo del formulario */
+    margin-left: auto; /* Centra el formulario */
+    margin-right: auto; /* Centra el formulario */
+    display: flex; /* Usa flexbox para organizar elementos del formulario */
+    flex-direction: column; /* Apila elementos verticalmente */
+    align-items: center; /* Centra los elementos del formulario */
+    
+}
+
+form div {
+    margin-bottom: 15px; /* Espacio entre grupos de formulario */
+    width: 100%; /* Asegura que los divs dentro del formulario ocupen todo el ancho */
+}
+
+form label {
+    display: block; /* Etiqueta en su propia línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1A4E6A; /* Azul primario para etiquetas */
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    border: 1px solid #AAB7B8; /* Borde apagado */
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button[type="submit"] {
+     margin-top: 10px; /* Espacio encima del botón de enviar */
+     width: 100%; /* Ajusta el ancho al contenido */
+     align-self: flex-start; /* Alinea el botón a la izquierda dentro del flex container */
+}

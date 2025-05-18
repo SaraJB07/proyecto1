@@ -44,7 +44,7 @@ $ingresos = $controller->queryAllIngreso();
                 <th>Mes</th>
                 <th>Año</th>
                 <th>Ingreso</th>
-                <th>Opciones</th>
+                <th class="opciones" colspan="2">Opciones</th>
             </tr>
         </thead>
         <div class="tabla1">
