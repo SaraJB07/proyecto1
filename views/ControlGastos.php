@@ -15,8 +15,6 @@ include '../models/entities/Entity.php';
 
 $conex = new \app\models\drivers\ConexDB();
 
-// La lógica de meses/años parece ser para un formulario de filtrado que no está presente.
-// Si no se usa en esta vista para filtrar la tabla, considera moverla.
 $mesesAnios = $conex->execSQL("SELECT DISTINCT month, year FROM reports ORDER BY year DESC, month DESC");
 $meses = [];
 $anios = [];
@@ -30,7 +28,6 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
         }
     }
 }
-// Fin de la lógica de meses/años
 
 ?>
 <!DOCTYPE html>
@@ -78,11 +75,8 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
                     echo '<td>' . htmlspecialchars($g['month']) . '</td>';
                     echo '<td>' . htmlspecialchars($g['year']) . '</td>';
                     echo '<td>' . htmlspecialchars($g['value']) . '</td>';
-                    // Combinamos los enlaces Modificar y Eliminar en una sola celda
                     echo '<td>';
-                    // Añadimos clases para estilizar los enlaces si es necesario
                     echo '<a href="formularioControlGastos.php?id=' . htmlspecialchars($g['id']) . '" class="modify-link">Modificar</a> ';
-                    // Añadimos confirmación para eliminar y la clase delete-link
                     echo '<a href="../views/acciones/ControlGastos/EliminarGastos.php?id=' . htmlspecialchars($g['id']) . '" onclick="return confirm(\'¿Seguro que desea eliminar este gasto?\')" class="delete-link">Eliminar</a>';
                     echo '</td>';
                     echo '</tr>';

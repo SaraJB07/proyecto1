@@ -1,11 +1,5 @@
-/* css/Ingreso.css */
 
-/* Importa los estilos generales */
 @import url("General.css");
-
-/* Estilos específicos para la página de ingresos */
-
-/* Estilo para el div que contiene el enlace "Registrar Ingreso" y "Volver" */
 .opciones {
     margin-bottom: 20px;
     text-align: center; /* Centra el div de opciones */
@@ -19,23 +13,11 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #EDF1F2; /* Borde ligero entre filas */
 }
-/* Estilo para los enlaces dentro del div .opciones para que parezcan botones */
 .opciones a {
-    /* Hereda estilos de .button-link en General.css */
-    /* Añade ajustes específicos aquí si es necesario */
-    margin: 0 10px; /* Espacio entre los enlaces si hay varios */
+    margin: 0 10px; 
 }
 
-/* Estilo para la tabla */
 .Tabla {
-    /* Hereda estilos generales de tabla de General.css */
-    margin-bottom: 20px; /* Añade espacio debajo de la tabla */
+    margin-bottom: 20px; 
 }
 
-
-/* Nota: El div con la clase "tabla1" que envuelve a tbody es HTML inválido.
-   Los estilos se aplican directamente a table, thead, tbody, tr, th, td.
-   Elimina <div class="tabla1"> y </div> de tu HTML (líneas 17 y 31). */
-
-/* Sugerencia: Eliminar la etiqueta <br> en ingreso.php (línea 4) */
-/* Si no puedes eliminarla: .opciones + br { display: none; } */

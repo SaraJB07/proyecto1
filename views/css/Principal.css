@@ -1,9 +1,6 @@
-/* css/Principal.css */
 
-/* Importa los estilos generales */
 @import url("General.css");
 
-/* Estilos específicos para la página del menú principal */
 
 .menu-container {
     display: flex; /* Usa flexbox para el diseño */
@@ -18,16 +15,14 @@
     width: 100%; /* Asegura que ocupe el ancho disponible hasta el max-width */
 }
 
-/* Estilo para los elementos form para añadir margen inferior */
 .menu-container form {
-    margin-bottom: 15px; /* Añade espacio entre botones */
+    margin-bottom: 15px;
     background-color: transparent; /* Sin fondo para formularios en el menú */
     padding: 0; /* Sin padding para formularios en el menú */
     box-shadow: none; /* Sin sombra para formularios en el menú */
     display: block; /* Asegura que el form se comporte como bloque */
 }
 
-/* Estilo para todos los botones dentro del contenedor del menú */
 .menu-container button {
     display: block; /* Hace que los botones ocupen todo el ancho */
     width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
@@ -38,6 +33,3 @@
 
 }
 
-/* Sugerencia: Eliminar las etiquetas <br> de principal.php (líneas 5, 11, 15, 19) */
-/* Si no puedes eliminarlas, puedes intentar ocultarlas con CSS, pero eliminarlas es mejor */
-/* .menu-container br { display: none; } */

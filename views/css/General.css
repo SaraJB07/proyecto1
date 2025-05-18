@@ -180,7 +180,7 @@ form select {
 }
 
 form button[type="submit"] {
-     margin-top: 10px; /* Espacio encima del botón de enviar */
-     width: 100%; /* Ajusta el ancho al contenido */
-     align-self: flex-start; /* Alinea el botón a la izquierda dentro del flex container */
+     margin-top: 10px; 
+     width: 100%; 
+     align-self: flex-start; 
 }

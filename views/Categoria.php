@@ -46,11 +46,8 @@ $categories = $controller->queryAllCategories();
                 echo '<tr>';
                 echo '  <td>' . htmlspecialchars($categorie->get('name')) . '</td>';
                 echo '  <td>' . htmlspecialchars($categorie->get('percentage')) . '</td>';
-                // Combinamos los enlaces Modificar y Eliminar en una sola celda
                 echo '  <td>';
-                // Añadimos clases para estilizar los enlaces si es necesario
                 echo '    <a href="formularioCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" class="modify-link">Modificar</a> ';
-                // Añadimos confirmación para eliminar y la clase delete-link
                 echo '    <a href="../views/acciones/Categoria_Acciones/EliminarCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" onclick="return confirm(\'¿Seguro que desea eliminar esta categoría?\')" class="delete-link">Eliminar</a>';
                 echo '  </td>';
                 echo '</tr>';
