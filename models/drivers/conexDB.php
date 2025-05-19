@@ -10,7 +10,7 @@ class ConexDB {
     private $user = 'root';
     private $pwd = '';
     private $nameDB = 'proyecto_1_db';
-    /*private $port = 3307;*/
+    private $port = 3307;
 
     private $conex = null;
 
@@ -21,7 +21,7 @@ class ConexDB {
             $this->user,
             $this->pwd,
             $this->nameDB,
-            /*$this->port*/
+            $this->port
         );
         
     }

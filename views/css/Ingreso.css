@@ -21,3 +21,13 @@ th, td {
     margin-bottom: 20px; 
 }
 
+body > a.back-link {
+    display: block; 
+    text-align: center; 
+    margin-top: 20px; 
+    width: 100%;
+    max-width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+

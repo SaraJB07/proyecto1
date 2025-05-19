@@ -32,7 +32,7 @@ $ingresos = $controller->queryAllIngreso();
     </div>
 
     <div class="opciones">
-    <a href="formularioIngreso.php">Registrar Ingreso</a> 
+    <a href="formularioIngreso.php" class="button-link">Registrar Ingreso</a> 
     </div>
     <br>
 
@@ -67,7 +67,7 @@ $ingresos = $controller->queryAllIngreso();
     </table>
 
     <div class="opciones">
-    <a href="../views/Principal.php">Volver</a>
+    <a href="../views/Principal.php" class="button-link">Volver</a>
     </div>
     
 </body>

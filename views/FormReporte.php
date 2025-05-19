@@ -71,6 +71,6 @@ $conex->close();
         </div>
        
     </form>
-    <a href="Principal.php">Volver</a>
+    <a href="Principal.php" class="button-link">Volver</a>
 </body>
 </html>

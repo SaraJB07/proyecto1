@@ -42,14 +42,14 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
 
 <body>
     <div class="logo">
-        <h1>Control Gastos</h1>
+        <h1>Gastos Registrados</h1>
     </div>
 
-    <div class="top-links">
+    <div class=" ">
         <a href="formularioControlGastos.php" class="button-link">Registrar Gasto</a>
         </div>
 
-    <h2>Gastos Registrados</h2>
+ 
 
     <table>
         <thead>
@@ -77,7 +77,7 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
                     echo '<td>' . htmlspecialchars($g['value']) . '</td>';
                     echo '<td>';
                     echo '<a href="formularioControlGastos.php?id=' . htmlspecialchars($g['id']) . '" class="modify-link">Modificar</a> ';
-                    echo '<a href="../views/acciones/ControlGastos/EliminarGastos.php?id=' . htmlspecialchars($g['id']) . '" onclick="return confirm(\'¿Seguro que desea eliminar este gasto?\')" class="delete-link">Eliminar</a>';
+                    echo '<a href="../views/acciones/ControlGastos/EliminarGastos.php?id=' . htmlspecialchars($g['id']) . '" onclick="return confirm(\'¿Seguro que desea eliminar este gasto?\')">Eliminar</a>';
                     echo '</td>';
                     echo '</tr>';
                 }
@@ -86,8 +86,9 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
             ?>
         </tbody>
     </table>
+    <br>
 
-    <a href="../views/Principal.php" class="back-link">Volver</a>
+    <a href="../views/Principal.php"  class="button-link">Volver</a>
 
 </body>
 

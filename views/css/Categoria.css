@@ -1,22 +1,22 @@
 
 @import url("General.css");
 body > a.button-link {
-    display: block; /* Asegura que ocupe su propia línea */
-    margin: 20px auto; /* Centra el enlace horizontalmente y añade margen */
-    text-align: center; /* Centra el texto dentro del "botón" */
-    max-width: 200px; /* Limita el ancho máximo del botón */
+    display: block; 
+    margin: 20px auto; 
+    text-align: center; 
+    max-width: 200px; 
 }
 
 table {
-    margin-bottom: 20px; /* Añade espacio debajo de la tabla */
+    margin-bottom: 20px; 
 }
 
 body > a.back-link {
-    display: block; /* Hace que sea un elemento de bloque */
-    text-align: center; /* Centra el enlace */
-    margin-top: 20px; /* Espacio encima del enlace */
+    display: block; 
+    text-align: center; 
+    margin-top: 20px; 
     width: 100%;
-    max-width: 500px; /* Limita el ancho */
+    max-width: 500px; 
     margin-left: auto;
     margin-right: auto;
 }
