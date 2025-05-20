@@ -40,6 +40,7 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
 <head>
     <meta charset="UTF-8">
     <title>Formulario Categoria</title>
+    <link rel="stylesheet" href="../views/css/formCategorie.css">
 </head>
 
 <body>

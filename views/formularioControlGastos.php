@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Registro de Gastos</title>
+    <link rel="stylesheet" href="../views/css/formularioControlGastos.css">
+    <link rel="stylesheet" href="../views/css/General.css">
+
 </head>
 <body>
 
@@ -122,10 +125,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div>
-        <button type="submit">Guardar</button>
+         <button type="submit" class="form-button">Guardar</button>
     </div>
 
-    <a href="ControlGastos.php">Volver</a>
+    <a href="ControlGastos.php" class="form-button">Volver</a>
 </form>
 
 </body>

@@ -1,45 +1,3 @@
-
-@import url("General.css");
-
-.top-links {
-    margin-bottom: 20px;
-    text-align: center; /* Centra el contenido (el enlace) horizontalmente */
-    width: 100%;
-    max-width: 400px; /* Limita el ancho del recuadro */
-    margin-left: auto; /* Centra el recuadro */
-    margin-right: auto; /* Centra el recuadro */
-    padding: 15px; /* Añade espacio dentro del recuadro */
-    background-color: #FFFFFF; /* Fondo blanco para el recuadro */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
-    display: flex; /* Usa flexbox para centrar el contenido si hay varios elementos */
-    justify-content: center; /* Centra los elementos hijos horizontalmente */
-    align-items: center; /* Centra los elementos hijos verticalmente */
-}
-
-.top-links a.button-link {
-     margin: 0; /* Elimina el margen si solo hay un enlace */
-     display: inline-block; 
-}
-
-
-table {
-}
-
-table td a {
-}
-
-body > a.back-link {
-    display: block; /* Hace que sea un elemento de bloque */
-    text-align: center; /* Centra el enlace */
-    margin-top: 20px; /* Espacio encima del enlace */
-    width: 100%;
-    max-width: 500px; /* Limita el ancho */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -113,4 +71,3 @@ form select {
 .form-button:hover {
     background-color: #2A6A85;
 }
-

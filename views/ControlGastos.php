@@ -37,6 +37,7 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/General.css">
     <link rel="stylesheet" href="css/ControlGastos.css">
+    
     <title>Control De Gastos</title>
 </head>
 
@@ -46,7 +47,7 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
     </div>
 
     <div class=" ">
-        <a href="formularioControlGastos.php" class="button-link">Registrar Gasto</a>
+
         </div>
 
  
@@ -86,6 +87,8 @@ if ($mesesAnios && $mesesAnios->num_rows > 0) {
             ?>
         </tbody>
     </table>
+    <br>
+    <a href="formularioControlGastos.php" class="button-link">Registrar gasto</a>
     <br>
 
     <a href="../views/Principal.php"  class="button-link">Volver</a>

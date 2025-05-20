@@ -27,6 +27,8 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
 <head>
     <meta charset="UTF-8">
     <title>Formulario Ingreso</title>
+    <link rel="stylesheet" href="../views/css/General.css">
+    <link rel="stylesheet" href="../views/css/formularioIngreso.css">
 </head>
 
 <body>

@@ -23,8 +23,9 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/formCategory.css">
     <title>Formulario Categoria</title>
+    <link rel="stylesheet" href="../views/css/General.css">
+    <link rel="stylesheet" href="../views/css/formCategorie.css">
 </head>
 
 <body>
@@ -54,7 +55,10 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
         <div>
             <button type="submit">Guardar</button>
         </div>
-        <a href="../views/categorie.php">Volver</a>
+        <a href="../views/categorie.php" class="form-button">Volver</a>
+
+        
+    
     
     </form>
     

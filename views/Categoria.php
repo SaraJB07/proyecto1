@@ -29,8 +29,6 @@ $categories = $controller->queryAllCategories();
         <h1>Categorias</h1>
     </div>
 
-    <a href="formularioCategoria.php" class="button-link">Registrar Categoria</a>
-
     <table>
         <thead>
             <tr>
@@ -45,7 +43,7 @@ $categories = $controller->queryAllCategories();
             foreach ($categories as $categorie) {
                 echo '<tr>';
                 echo '  <td>' . htmlspecialchars($categorie->get('name')) . '</td>';
-                echo '  <td>' . htmlspecialchars($categorie->get('percentage')) . '%</td>';
+                echo '  <td>' . htmlspecialchars($categorie->get('percentage')) . '</td>';
                 echo '  <td>';
                 echo '    <a href="formularioCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" class="modify-link">Modificar</a> ';
                 echo '    <a href="../views/acciones/Categoria_Acciones/EliminarCategoria.php?id=' . htmlspecialchars($categorie->get('id')) . '" onclick="return confirm(\'¿Seguro que desea eliminar esta categoría?\')" >Eliminar</a>';
@@ -55,8 +53,9 @@ $categories = $controller->queryAllCategories();
             ?>
         </tbody>
     </table>
+     <a href="formularioCategoria.php" class="button-link">Registrar Categoria</a>
 
-    <a href="../views/Principal.php" class="button-link">Volver </a>
+    <a href="../views/Principal.php" class="button-link">Volver</a>
 
 </body>
 
