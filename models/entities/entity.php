@@ -1,7 +1,7 @@
 <?php
 namespace app\models\entities;
 
-echo "Loaded entity<br>";
+
 abstract class Entity
 {
     abstract public function all();

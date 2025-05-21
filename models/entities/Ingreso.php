@@ -106,8 +106,6 @@ class Ingreso extends Entity
         // Solo actualizar el valor del ingreso
         if (!is_null($this->id) && $this->id !== '' && !is_null($this->value) && $this->value !== '') {
             $sql = "UPDATE income SET value = '" . $this->value . "' WHERE id = " . intval($this->id);
-            echo 'SQL: ' . $sql; // DEBUG
-            error_log('SQL: ' . $sql); // DEBUG
             $resultDB = $conex->execSQL($sql);
         } else {
             error_log('ERROR: id o value nulos');
@@ -141,6 +139,8 @@ class Ingreso extends Entity
             if ($result && $row = $result->fetch_assoc()) {
                 $countBills = (int)$row['count'];
             }
+
+            
             if ($countIncome === 0 && $countBills === 0) {
                 $sqlDeleteReport = "DELETE FROM reports WHERE id = " . intval($idReport);
                 $deleteReport = $conex->execSQL($sqlDeleteReport);
