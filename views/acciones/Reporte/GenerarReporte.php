@@ -28,11 +28,15 @@ if (!empty($reporte['gastos'])) {
 <head>
     <meta charset="UTF-8">
     <title>Reporte del Mes</title>
+    <link rel="stylesheet" href="../../css/General.css">
+    <link rel="stylesheet" href="../../css/Categoria.css">
 </head>
 <body>
-    <h1>Reporte de <?= $reporte['mes'] ?>/<?= $reporte['anio'] ?></h1>
+    <div class="logo">
+       <h1>Reporte de <?= $reporte['mes'] ?>/<?= $reporte['anio'] ?></h1>
     <h2>Ingreso del mes: $<?= number_format($reporte['ingreso'], 2) ?></h2>
     <h3>Gastos:</h3>
+    </div>    
     <?php
     // Definir límites máximos por categoría obtenidos desde la base de datos
     $limites = isset($reporte['limites']) ? $reporte['limites'] : [];
@@ -48,7 +52,7 @@ if (!empty($reporte['gastos'])) {
     <?php if (empty($reporte['gastos'])): ?>
         <p>No hay gastos registrados para este mes.</p>
     <?php else: ?>
-        <table border="1" cellpadding="5">
+        <table class="Tabla">
             <tr>
                 <th>Categoría</th>
                 <th>Valor</th>
@@ -82,24 +86,26 @@ if (!empty($reporte['gastos'])) {
         ?>
         <h3>Ahorro del mes: $<?= number_format($ahorro, 2) ?> (<?= number_format($porcentajeAhorro, 1) ?>%)</h3>
         <?php if ($porcentajeAhorro < 10): ?>
-            <p style="color:orange; font-weight:bold;">Advertencia: No hubo ahorro suficiente. El porcentaje de ahorro fue de <?= number_format($porcentajeAhorro, 1) ?>%.</p>
+            <p>Advertencia: No hubo ahorro suficiente. El porcentaje de ahorro fue de <?= number_format($porcentajeAhorro, 1) ?>%.</p>
         <?php else: ?>
-            <p style="color:green; font-weight:bold;">¡Felicidades! Tu ahorro es igual o mayor al 10%.</p>
+            <p>¡Felicidades! Tu ahorro es igual o mayor al 10%.</p>
         <?php endif; ?>
+        <br>
         <?php if (!empty($sugerencias)): ?>
-            <h4 style="color:red;">Sugerencia:</h4>
+            <h4>Sugerencia:</h4>
             <ul>
                 <?php foreach ($sugerencias as $cat): ?>
                     <li>Baja el consumo en <b><?= htmlspecialchars($cat) ?></b></li>
                 <?php endforeach; ?>
             </ul>
         <?php else: ?>
-            <p style="color:green;">¡Tus gastos están dentro de los límites recomendados!</p>
+            <p>¡Tus gastos están dentro de los límites recomendados!</p>
         <?php endif; ?>
-     <a href="../../../views/Principal.php">Volver</a>
+     
 
 
         <?php endif; ?>
+        <a href="../../../views/Principal.php" class="button-link">Volver</a>
     <br>
 </body>
 </html>

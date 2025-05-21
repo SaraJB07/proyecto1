@@ -41,6 +41,7 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
     <meta charset="UTF-8">
     <title>Formulario Categoria</title>
     <link rel="stylesheet" href="../views/css/formCategorie.css">
+    <link rel="stylesheet" href="css/ControlGastos.css">
 </head>
 
 <body>
@@ -72,9 +73,11 @@ $categorias = $conex->execSQL("SELECT id, name FROM categories");
         <?php else: ?>
         <div>No se puede modificar esta categoría porque tiene gastos asociados.</div>
         <?php endif; ?>
-        <a href="../views/Categoria.php">Volver</a>
+        
     
     </form>
+    <a href="../views/Categoria.php" class="button-link">Volver</a>
+    
     
 </body>
 </html>

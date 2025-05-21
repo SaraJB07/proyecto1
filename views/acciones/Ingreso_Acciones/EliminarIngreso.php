@@ -21,18 +21,25 @@ $result = $controller->deleteIngreso($id);
 <head>
     <meta charset="UTF-8">
     <title>Resultado de la operación</title>
+    <link rel="stylesheet" href="../../css/respuesta.css">
+     <link rel="stylesheet" href="../../css/General.css">
 </head>
 <body>
-<div class="logo">
-    <h1>Resultado de la operación</h1>
-</div>
-    <?php
+    <div class="logo">
+        <h1>Resultado</h1>
+    </div>
+    <div class="form-ingreso-container">
+        <?php
         if ($result) {
-            echo '<br><p>Ingreso eliminado</p>';
-        } else {
+            echo '<p>Ingreso eliminado</p>';
+            } else {
             echo '<p>No se puede eliminar el ingreso</p>';
-        }
-    ?>
-    <a href="../../Ingreso.php">Volver</a>
+            }
+         ?>
+
+    </div>
+    <br>
+    <a href="../../Ingreso.php" class="button-link">Volver</a>   
+
 </body>
 </html>

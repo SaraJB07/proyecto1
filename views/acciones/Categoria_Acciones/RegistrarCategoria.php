@@ -22,14 +22,16 @@ $result = empty($_POST['idInput'])
 
 <head>
     <meta charset="UTF-8">
-    <title>Resultado de la operación</title>
+    <title>Resultado</title>
+    <link rel="stylesheet" href="../../css/respuesta.css">
+     <link rel="stylesheet" href="../../css/General.css">
 </head>
 
 <body>
 <div class="logo">
-    <h1>Resultado de la operación</h1>
-   
+    <h1>Resultado</h1>
 </div>
+    <div class="form-ingreso-container">
     <?php
     if (is_array($result) && !empty($result['excesoPorcentaje'])) {
         echo '<p>La suma de los porcentajes de las categorías no puede superar el 100%.</p>';
@@ -39,8 +41,11 @@ $result = empty($_POST['idInput'])
         echo '<p>No se pudo guardar los datos</p>';
     }
     ?>
-    <a href="../../Categoria.php">Volver</a>
-    
+    </div>
+    <br>
+    <a href="../../Categoria.php" class="button-link">Volver</a> 
+
+
 </body>
 
 </html>

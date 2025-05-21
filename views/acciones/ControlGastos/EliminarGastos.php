@@ -17,14 +17,17 @@ $result = $controller->deleteGasto($_GET['id']);
 
 <head>
     <meta charset="UTF-8">
-    <title>Eliminar Categoria</title>
+    <title>Eliminar Gasto</title>
+    <link rel="stylesheet" href="../../css/respuesta.css">
+    <link rel="stylesheet" href="../../css/General.css">
 </head>
 
 <body>
-<div class="logo">
-    <h1>Resultado de la operación:</h1>
-</div>
-<?php
+     <div class="logo">
+    <h1>Resultado</h1>
+    </div>
+    <div class="form-ingreso-container">
+    <?php
     if (is_array($result)) {
         if (!$result['gastoEliminado'] && !empty($result['bloqueada'])) {
             echo '<p>No se puede eliminar la categoría porque tiene gastos asociados.</p>';
@@ -36,8 +39,11 @@ $result = $controller->deleteGasto($_GET['id']);
     } else {
         echo ($result ? '<p>Datos eliminados</p>' : '<p>No se pudo borrar los datos</p>');
     }
-?>
-<a href="../../ControlGastos.php">Volver</a>
+    ?>
+    </div>
+    <br>
+    <a href="../../ControlGastos.php" class="button-link">Volver</a> 
+
 </body>
 
 </html>

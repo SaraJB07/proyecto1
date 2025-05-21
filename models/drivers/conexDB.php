@@ -21,7 +21,7 @@ class ConexDB {
             $this->user,
             $this->pwd,
             $this->nameDB,
-        /*$this->port*/
+           /* $this->port*/
         );
         
     }
